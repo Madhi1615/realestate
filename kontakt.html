@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — KIEZWERK Immobilien</title>
+<meta name="description" content="Kontaktieren Sie KIEZWERK Immobilien für eine kostenlose Immobilienbewertung oder Kiez-Beratung in Berlin.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a class="brand" href="index.html">KIEZWERK <span class="brand-mark">IMMOBILIEN</span></a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="immobilien.html">Immobilien</a></li>
+      <li><a href="ueber-uns.html">Über uns</a></li>
+      <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+    </ul>
+    <a class="nav-cta" href="#kontaktformular">Immobilie bewerten lassen →</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="page-header container">
+    <p class="eyebrow">Unverbindlich &amp; kostenlos</p>
+    <h1>Sprechen wir über Ihren Kiez.</h1>
+    <p>Ob Kauf, Verkauf, Miete oder eine kostenlose Bewertung Ihrer Immobilie — schreiben Sie uns, wir melden uns innerhalb eines Werktags.</p>
+  </section>
+
+  <section class="section" id="kontaktformular">
+    <div class="container">
+      <div class="form-grid">
+
+        <div>
+          <!--
+            HINWEIS FÜR DIE UMSETZUNG:
+            GitHub Pages liefert nur statische Dateien aus — es gibt keinen Server,
+            der dieses Formular verarbeiten kann. Diese Version öffnet das
+            E-Mail-Programm des Besuchers (mailto:). Für eine komfortablere
+            Zustellung ohne eigenes Backend eignen sich DSGVO-konform betreibbare
+            Form-Backends wie Formspree oder Netlify Forms (siehe README).
+          -->
+          <form id="contact-form" action="mailto:info@kiezwerk-beispiel.de" method="post" enctype="text/plain">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="Name" required autocomplete="name">
+            </div>
+            <div class="form-field">
+              <label for="email">E-Mail-Adresse</label>
+              <input type="email" id="email" name="E-Mail" required autocomplete="email">
+            </div>
+            <div class="form-field">
+              <label for="phone">Telefon (optional)</label>
+              <input type="tel" id="phone" name="Telefon" autocomplete="tel">
+            </div>
+            <div class="form-field">
+              <label for="topic">Anliegen</label>
+              <select id="topic" name="Anliegen">
+                <option>Immobilie kaufen</option>
+                <option>Immobilie mieten</option>
+                <option>Immobilie verkaufen / vermieten lassen</option>
+                <option>Kostenlose Bewertung</option>
+                <option>Sonstiges</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Nachricht</label>
+              <textarea id="message" name="Nachricht" required></textarea>
+            </div>
+
+            <div class="form-consent">
+              <input type="checkbox" id="consent-checkbox" required>
+              <label for="consent-checkbox">
+                Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> zur Kenntnis genommen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage elektronisch erhoben und gespeichert werden. Die Einwilligung kann ich jederzeit für die Zukunft per E-Mail widerrufen.
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Nachricht senden</button>
+            <p class="form-note">Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Details siehe <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          </form>
+        </div>
+
+        <div>
+          <div class="info-card">
+            <h3>Büro</h3>
+            <div class="info-row"><span>Adresse</span><span class="placeholder-flag">Straße Nr., 10119 Berlin</span></div>
+            <div class="info-row"><span>Telefon</span><span class="placeholder-flag">+49 30 000 00 00</span></div>
+            <div class="info-row"><span>E-Mail</span><a href="mailto:info@kiezwerk-beispiel.de">info@kiezwerk-beispiel.de</a></div>
+            <div class="info-row"><span>Sprechzeiten</span><span>Mo–Fr, 9–18 Uhr</span></div>
+          </div>
+
+          <div class="map-placeholder" id="map-placeholder">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3E6E7A" stroke-width="1.4" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>
+            <p>Die Karte wird von Google Maps geladen. Erst nach Ihrer Zustimmung wird eine Verbindung zu Google-Servern aufgebaut und Ihre IP-Adresse übertragen.</p>
+            <button id="map-load-btn" type="button" class="btn btn-ghost">Karte laden &amp; zustimmen</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">KIEZWERK <span class="brand-mark">IMMOBILIEN</span></a>
+        <p>Wohnimmobilien in Berlin — kuratiert nach Kiez, begleitet von Menschen, nicht von Algorithmen.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="immobilien.html">Immobilien</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="#" id="footer-cookie-settings">Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><span class="placeholder-flag">Straße&nbsp;Nr.</span></li>
+          <li><span class="placeholder-flag">10119 Berlin</span></li>
+          <li><a href="mailto:info@kiezwerk-beispiel.de">info@kiezwerk-beispiel.de</a></li>
+          <li><span class="placeholder-flag">+49 30 000 00 00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 KIEZWERK Immobilien. Alle Rechte vorbehalten.</span>
+      <span>Beispielinhalt zu Demonstrationszwecken.</span>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie-Hinweis">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <p>Wir verwenden nur technisch notwendige Speicherung, um Ihre Cookie-Auswahl zu merken. Optional laden wir eine Google-Maps-Karte zur Standortanzeige — nur mit Ihrer Zustimmung. Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-decline" type="button">Nur notwendige</button>
+      <button id="cookie-settings" type="button">Einstellungen</button>
+      <button id="cookie-accept" type="button">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<div id="cookie-modal">
+  <div class="cookie-modal-card">
+    <h3>Cookie-Einstellungen</h3>
+    <p style="font-size:13px;color:var(--ink-soft)">Sie behalten die Kontrolle darüber, was geladen wird.</p>
+    <div class="cookie-toggle-row">
+      <div><strong>Technisch notwendig</strong><p>Speichert ausschließlich Ihre Cookie-Auswahl lokal in Ihrem Browser.</p></div>
+      <label class="switch"><input type="checkbox" checked disabled><span class="switch-track"></span></label>
+    </div>
+    <div class="cookie-toggle-row">
+      <div><strong>Google Maps (Kontaktseite)</strong><p>Lädt eine eingebettete Karte von Google. Dabei kann Ihre IP-Adresse an Google (USA) übertragen werden.</p></div>
+      <label class="switch"><input type="checkbox" id="consent-maps"><span class="switch-track"></span></label>
+    </div>
+    <div class="cookie-modal-actions">
+      <button id="cookie-modal-close" type="button" class="btn btn-ghost">Abbrechen</button>
+      <button id="cookie-modal-save" type="button" class="btn btn-ghost">Auswahl speichern</button>
+      <button id="cookie-modal-accept-all" type="button" class="btn btn-brass">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
